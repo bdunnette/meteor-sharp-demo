@@ -10,11 +10,13 @@
 </body>
 
 <template name="fileUpload">
-  <input class="myFileInput" type="file" multiple/>
+  <input class="myFileInput" multiple type="file"/>
 </template>
 
 <template name="fileList">
   {{#each images}}
-  <a href="{{this.url store='web'}}"><img src="{{this.url store='thumbs'}}" alt="{{this.name}}"></a>
+    <a href="{{this.url store='web'}}" target="_blank">
+      <img class="img" alt="{{this.name}}" src="{{this.url store='thumbs'}}">
+    </a>
   {{/each}}
 </template>
