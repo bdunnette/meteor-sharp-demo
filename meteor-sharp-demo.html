@@ -1,0 +1,20 @@
+<head>
+  <title>meteor-sharp-demo</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> fileUpload}}
+  {{> fileList}}
+</body>
+
+<template name="fileUpload">
+  <input class="myFileInput" type="file" multiple/>
+</template>
+
+<template name="fileList">
+  {{#each images}}
+  <a href="{{this.url store='web'}}"><img src="{{this.url store='thumbs'}}" alt="{{this.name}}"></a>
+  {{/each}}
+</template>
